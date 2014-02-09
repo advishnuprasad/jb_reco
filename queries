@@ -1,0 +1,259 @@
+CREATE (user1:JbMember {name: "Vishnu"}),
+       (user2:JbMember {name: "John"}),
+       (user3:JbMember {name: "Amit"}),
+       (user4:JbMember {name: "Hemanth"}),
+       (user5:JbMember {name: "Surabhi"})
+
+CREATE (book1:Book {title: "Inferno", category: "Fiction"}),
+       (book2:Book {title: "The Lost Symbol", category: "Fiction"}),
+       (book3:Book {title: "The Digital Fortress", category: "Fiction"}),
+       (book4:Book {title: "Angels & Daemons", category: "Fiction"}),
+       (book5:Book {title: "Davinci Code", category: "Fiction"}),
+       (book6:Book {title: "Deception Point", category: "Fiction"})
+CREATE (user1)-[:READ]->(book3)
+CREATE (user1)-[:READ]->(book2)
+CREATE (user1)-[:READ]->(book1)
+CREATE (user2)-[:READ]->(book3)
+CREATE (user2)-[:READ]->(book1)
+CREATE (user3)-[:READ]->(book5)
+CREATE (user3)-[:READ]->(book4)
+CREATE (user3)-[:READ]->(book2)
+CREATE (user4)-[:READ]->(book5)
+CREATE (user4)-[:READ]->(book3)
+CREATE (user4)-[:READ]->(book1)
+CREATE (user5)-[:READ]->(book6)
+CREATE (user5)-[:READ]->(book5)
+CREATE (user5)-[:READ]->(book1)
+
+
+CREATE (u1:User {id: 1})
+CREATE (u2:User {id: 2})
+CREATE (u3:User {id: 3})
+CREATE (u4:User {id: 4})
+
+CREATE (t1:Book {title: "t1", category: "c1", times_rented: 10, language: "l1"})
+CREATE (t2:Book {title: "t2", category: "c1", times_rented: 100, language: "l2"})
+CREATE (t3:Book {title: "t3", category: "c2", times_rented: 30, language: "l1"})
+CREATE (t4:Book {title: "t4", category: "c1", times_rented: 89, language: "l1"})
+CREATE (t5:Book {title: "t5", category: "c2", times_rented: 1, language: "l1"})
+CREATE (t6:Book {title: "t6", category: "c3", times_rented: 190, language: "l1"})
+CREATE (t7:Book {title: "t7", category: "c2", times_rented: 23, language: "l1"})
+CREATE (t8:Book {title: "t8", category: "c1", times_rented: 98, language: "l1"})
+CREATE (t9:Book {title: "t9", category: "c1", times_rented: 43, language: "l1"})
+
+CREATE (u1)-[:READ]->(t1)
+CREATE (u1)-[:READ]->(t2)
+CREATE (u1)-[:READ]->(t3)
+CREATE (u1)-[:READ]->(t4)
+CREATE (u2)-[:READ]->(t2)
+CREATE (u2)-[:READ]->(t3)
+CREATE (u2)-[:READ]->(t4)
+CREATE (u2)-[:READ]->(t5)
+CREATE (u3)-[:READ]->(t1)
+CREATE (u3)-[:READ]->(t4)
+CREATE (u3)-[:READ]->(t6)
+CREATE (u3)-[:READ]->(t7)
+CREATE (u4)-[:READ]->(t1)
+CREATE (u4)-[:READ]->(t2)
+CREATE (u4)-[:READ]->(t3)
+CREATE (u4)-[:READ]->(t4)
+CREATE (u4)-[:READ]->(t8)
+CREATE (u4)-[:READ]->(t9)
+
+MATCH (member:User {id: 1})-[:READ]->(titles)<-[:READ]-(other_members)
+with distinct other_members as om, member as me, titles.category as cat , count(titles.category) as cou
+
+Group by category - All users
+=============================
+MATCH (om)-[:READ]->(new_titles)
+return distinct new_titles.category, count(new_titles.category), om.id
+
+Group by category - Common titles
+================================
+MATCH (m:User)-[:READ]->(new_titles)<-[:READ]-(m1:User {id: 1})
+with new_titles.category as o_cat, count(new_titles.category) as cat_count, m as o_m
+return o_m.id, o_cat, cat_count order by o_m.id
+
+
+Group by category other users titles
+===================================
+MATCH (m:User)-[:READ]->(new_titles)<-[:READ]-(m1:User {id: 1})
+with  distinct m as o_m
+MATCH (o_m)-[:READ]->(new_titles)
+return distinct new_titles.category, count(new_titles.category), o_m.id  order by o_m.id
+
+
+
+http://stackoverflow.com/questions/13824962/neo4j-cypher-vs-gremlin-query-language
+
+http://markorodriguez.com/2011/09/22/a-graph-based-movie-recommender-engine/
+
+
+gremlin:
+
+vertex : g.V
+edge: g.E
+
+g = new TinkerGraph()
+
+m1 = g.addVertex([name:'A',type:'User'])
+m2 = g.addVertex([name:'B',type:'User'])
+m3 = g.addVertex([name:'C',type:'User'])
+m4 = g.addVertex([name:'D',type:'User'])
+
+t1 = g.addVertex([title: "t1", times_rented: 10, language: "l1", type: "Title"])
+t2 = g.addVertex([title: "t2", times_rented: 100, language: "l2", type: "Title"])
+t3 = g.addVertex([title: "t3", times_rented: 30, language: "l1", type: "Title"])
+t4 = g.addVertex([title: "t4", times_rented: 89, language: "l1", type: "Title"])
+t5 = g.addVertex([title: "t5", times_rented: 1, language: "l1", type: "Title"])
+t6 = g.addVertex([title: "t6", times_rented: 190, language: "l1", type: "Title"])
+t7 = g.addVertex([title: "t7", times_rented: 23, language: "l1", type: "Title"])
+t8 = g.addVertex([title: "t8", times_rented: 98, language: "l1", type: "Title"])
+t9 = g.addVertex([title: "t9", times_rented: 43, language: "l1", type: "Title"])
+
+c1 = g.addVertex([category: "c1", type: 'category'])
+c2 = g.addVertex([category: "c2", type: 'category'])
+c3 = g.addVertex([category: "c3", type: 'category'])
+
+tc1 = g.addEdge(t1,c1,'hasCategory')
+tc2 = g.addEdge(t2,c1,'hasCategory')
+tc3 = g.addEdge(t3,c2,'hasCategory')
+tc4 = g.addEdge(t4,c1,'hasCategory')
+tc5 = g.addEdge(t5,c2,'hasCategory')
+tc6 = g.addEdge(t6,c3,'hasCategory')
+tc7 = g.addEdge(t7,c2,'hasCategory')
+tc8 = g.addEdge(t8,c1,'hasCategory')
+tc9 = g.addEdge(t9,c1,'hasCategory')
+
+mt1 = g.addEdge(m1,t1,'read')
+mt1 = g.addEdge(m1,t2,'read')
+mt1 = g.addEdge(m1,t3,'read')
+mt1 = g.addEdge(m1,t4,'read')
+mt1 = g.addEdge(m2,t2,'read')
+mt1 = g.addEdge(m2,t3,'read')
+mt1 = g.addEdge(m2,t4,'read')
+mt1 = g.addEdge(m2,t5,'read')
+mt1 = g.addEdge(m3,t1,'read')
+mt1 = g.addEdge(m3,t4,'read')
+mt1 = g.addEdge(m3,t6,'read')
+mt1 = g.addEdge(m3,t7,'read')
+mt1 = g.addEdge(m4,t1,'read')
+mt1 = g.addEdge(m4,t2,'read')
+mt1 = g.addEdge(m4,t3,'read')
+mt1 = g.addEdge(m4,t4,'read')
+mt1 = g.addEdge(m4,t8,'read')
+mt1 = g.addEdge(m4,t9,'read')
+
+m1.out("read").out("hasCategory").dedup().in("hasCategory").in("read").except([m1]).groupCount().cap().orderMap(T.decr)
+
+
+v.outE.inV.outE.aggregate(x).back(2).inE.outV.filter{it != m}.dedup().outE.inV.outE.inV.back(2).title.groupCount(m)
+
+v.as('x').outE.inV.aggregate(m).inE.outV.dedup().except('x').outE.inV
+
+
+v.as('x').outE.inV.aggregate(m).inE.outV.dedup().outE.inV.order({it.b.getProperty('times_rented') <=> it.a.getProperty('times_rented')}).order({it.b.getProperty('title') <=> it.a.getProperty('title')}).except(m).map
+
+s = []
+m = [:]
+
+
+v.outE.inV.outE.inV.as('z').aggregate(s).groupCount(m).as('x').inE.outV.dedup().outE.inV.order({it.b.getProperty('times_rented') <=> it.a.getProperty('times_rented')}).except(s).map
+
+
+s = []
+m = [:]
+v.as('x').outE.inV.as('z').aggregate(k).outE.inV.aggregate(s).groupCount(m).back('z').inE.outV.dedup().except('x').outE.inV.except(k).map
+
+
+
+
+
+gremlin> m = [:]
+gremlin> x = [] as Set
+gremlin> v.out('hasGenera').aggregate(x).back(2).corated(3).filter{it != v}.out('hasGenera').retain(x).back(2).title.groupCount(m)
+==>null
+gremlin> m.sort{a,b -> b.value <=> a.value}[0..9]
+==>American Beauty (1999)=949
+==>Back to the Future (1985)=876
+==>Toy Story 2 (1999)=871
+==>Princess Bride, The (1987)=851
+==>Groundhog Day (1993)=843
+==>Shakespeare in Love (1998)=807
+==>Forrest Gump (1994)=775
+==>Men in Black (1997)=747
+==>E.T. the Extra-Terrestrial (1982)=737
+==>Bug's Life, A (1998)=700
+
+
+g = new TinkerGraph()
+u1 = g.addVertex([name:'Smith',type:'User'])
+u2 = g.addVertex([name:'John',type:'User'])
+u3 = g.addVertex([name:'Dan',type:'User'])
+
+c1 = g.addVertex([category: "c1", type: 'category'])
+c2 = g.addVertex([category: "c2", type: 'category'])
+
+
+t1 = g.addVertex([title: "t1", type: "Title"])
+t2 = g.addVertex([title: "t2", type: "Title"])
+t3 = g.addVertex([title: "t3", type: "Title"])
+t4 = g.addVertex([title: "t4", type: "Title"])
+t5 = g.addVertex([title: "t5", type: "Title"])
+
+tc1 = g.addEdge(t1,c1,'hasCategory')
+tc2 = g.addEdge(t3,c1,'hasCategory')
+tc3 = g.addEdge(t4,c1,'hasCategory')
+tc4 = g.addEdge(t5,c1,'hasCategory')
+
+tc5 = g.addEdge(t2,c2,'hasCategory')
+
+ut1 = g.addEdge(u1, t1, 'read')
+ut2 = g.addEdge(u2, t1, 'read')
+ut3 = g.addEdge(u2, t2, 'read')
+ut4 = g.addEdge(u2, t3, 'read')
+ut5 = g.addEdge(u3, t1, 'read')
+ut6 = g.addEdge(u3, t4, 'read')
+ut7 = g.addEdge(u3, t5, 'read')
+
+
+m1.out("read").out("hasCategory").in("hasCategory").in("read").except([u1]).groupCount().cap().orderMap(T.decr).map()
+
+
+curl -d "script=+g.v(1)" http://localhost:7474/db/data/ext/GremlinPlugin/graphdb/execute_script
+
+script=g.getIndex%28%27node_auto_index%27%2C+Vertex.class%29.get%28%27name%27%2C%27I%27%29_%28%29.out%28%29
+
+curl -d "script=g.getIndex%28%27node_auto_index%27%2C+Vertex.class%29.get%28%27name%27%2C%27I%27%29_%28%29.out%28%29" http://localhost:7474/db/data/ext/GremlinPlugin/graphdb/execute_script
+
+curl -d "script=g.startTransaction();g.V" http://localhost:7474/db/data/ext/GremlinPlugingraphdb/execute_script
+
+
+curl -d "script=g" http://localhost:7474/db/data/ext/GremlinPlugin/graphdb/execute_script
+
+
+g.neo.execute_script("g.V('name',node_id).out('read').out('hasCategory').in('hasCategory').in('read').except([g.V('name',node_id)]).groupCount().cap().orderMap(T.decr).map()", {:node_id => node.name})
+
+
+
+g.neo.execute_script("g.V('name',node_id).out('read').out('hasCategory').dedup.in('hasCategory').in('read').except([g.V('name',node_id)]).groupCount().cap()", {:node_id => node.name})
+
+.in('hasCategory').in('read').except([g.V('name',node_id)]).groupCount().cap().orderMap(T.decr).map()", {:node_id => node.name})
+
+
+
+[34, 20, 36, 2, 2, 2]
+
+
+
+[2, 2, 2, 39, 36]
+
+
+[191882, 222131, 216484, 180132, 228122, 180169, 180149, 295255, 227794, 180169, 246733]
+
+
+g.neo.execute_script("g.V('name',node_id).out('read').out('hasCategory').dedup.in('hasCategory').in('read').except([g.V('name',node_id)]).groupCount().cap().orderMap(T.decr).outE.inV[0..10].title_id", {:node_id => node.name})
+
+java -server -Xmx2G -jar batch-import/target/batch-import-jar-with-dependencies.jar /var/lib/neo4j/data/graph.db nodes.csv rels.csv node_index vertices fulltext nodes_index.csv relationship_index edges exact rels_index.csv
+
+java -server -Xmx2G -jar batch-import/target/batch-import-jar-with-dependencies.jar /var/lib/neo4j/data/graph.db nodes.csv rels.csv node_index vertices fulltext nodes_index.csv relationship_index edges exact rels_index.csv

@@ -1,4 +1,7 @@
-slb_share
-=========
+jb_reco
+=======
+Recommendation engine for Justbooks
 
-A small app for sharing useful links among colleagues
+- neo4j
+- neogrpahy
+- gremlin

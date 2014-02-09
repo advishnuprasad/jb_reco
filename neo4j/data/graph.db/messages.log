@@ -1,0 +1,2 @@
+2014-02-07 11:25:28.680+0000 INFO  [org.neo4j]: Thread[main,5,main] Starting BatchInserter(EmbeddedBatchInserter[/home/vishnu/zazen/neo4j_memp/neo4j/data/graph.db])
+2014-02-07 11:25:32.656+0000 INFO  [org.neo4j]: Thread[main,5,main] Clean shutdown on BatchInserter(EmbeddedBatchInserter[/home/vishnu/zazen/neo4j_memp/neo4j/data/graph.db])

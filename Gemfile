@@ -73,3 +73,9 @@ group :development, :test do
   gem "growl", "~> 1.0.3"
   gem "shoulda-matchers"
 end
+gem 'bootstrap_forms'
+gem 'chosen-rails'
+gem "neography"
+gem 'activerecord-oracle_enhanced-adapter'
+gem 'ruby-oci8'
+gem 'fastercsv'

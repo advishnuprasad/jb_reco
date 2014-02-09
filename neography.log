@@ -1,0 +1,291 @@
+# Logfile created on 2014-01-20 20:58:57 +0530 by logger.rb/36483
+D, [2014-01-20T20:58:57.557769 #26390] DEBUG -- : OK, created {
+  "extensions" : {
+  },
+  "outgoing_relationships" : "http://localhost:7474/db/data/node/789/relationships/out",
+  "labels" : "http://localhost:7474/db/data/node/789/labels",
+  "all_typed_relationships" : "http://localhost:7474/db/data/node/789/relationships/all/{-list|&|types}",
+  "traverse" : "http://localhost:7474/db/data/node/789/traverse/{returnType}",
+  "self" : "http://localhost:7474/db/data/node/789",
+  "property" : "http://localhost:7474/db/data/node/789/properties/{key}",
+  "properties" : "http://localhost:7474/db/data/node/789/properties",
+  "outgoing_typed_relationships" : "http://localhost:7474/db/data/node/789/relationships/out/{-list|&|types}",
+  "incoming_relationships" : "http://localhost:7474/db/data/node/789/relationships/in",
+  "create_relationship" : "http://localhost:7474/db/data/node/789/relationships",
+  "paged_traverse" : "http://localhost:7474/db/data/node/789/paged/traverse/{returnType}{?pageSize,leaseTime}",
+  "all_relationships" : "http://localhost:7474/db/data/node/789/relationships/all",
+  "incoming_typed_relationships" : "http://localhost:7474/db/data/node/789/relationships/in/{-list|&|types}",
+  "data" : {
+    "name" : "Johnathan"
+  }
+}
+I, [2014-01-20T20:58:57.565468 #26390]  INFO -- : [Neography::Query] /node {"name":"Johnathan"} [104.9ms]
+D, [2014-01-20T20:58:57.613859 #26390] DEBUG -- : OK, created {
+  "extensions" : {
+  },
+  "outgoing_relationships" : "http://localhost:7474/db/data/node/790/relationships/out",
+  "labels" : "http://localhost:7474/db/data/node/790/labels",
+  "all_typed_relationships" : "http://localhost:7474/db/data/node/790/relationships/all/{-list|&|types}",
+  "traverse" : "http://localhost:7474/db/data/node/790/traverse/{returnType}",
+  "self" : "http://localhost:7474/db/data/node/790",
+  "property" : "http://localhost:7474/db/data/node/790/properties/{key}",
+  "properties" : "http://localhost:7474/db/data/node/790/properties",
+  "outgoing_typed_relationships" : "http://localhost:7474/db/data/node/790/relationships/out/{-list|&|types}",
+  "incoming_relationships" : "http://localhost:7474/db/data/node/790/relationships/in",
+  "create_relationship" : "http://localhost:7474/db/data/node/790/relationships",
+  "paged_traverse" : "http://localhost:7474/db/data/node/790/paged/traverse/{returnType}{?pageSize,leaseTime}",
+  "all_relationships" : "http://localhost:7474/db/data/node/790/relationships/all",
+  "incoming_typed_relationships" : "http://localhost:7474/db/data/node/790/relationships/in/{-list|&|types}",
+  "data" : {
+    "name" : "Mark"
+  }
+}
+I, [2014-01-20T20:58:57.614464 #26390]  INFO -- : [Neography::Query] /node {"name":"Mark"} [48.73ms]
+D, [2014-01-20T20:58:57.669526 #26390] DEBUG -- : OK, created {
+  "extensions" : {
+  },
+  "outgoing_relationships" : "http://localhost:7474/db/data/node/791/relationships/out",
+  "labels" : "http://localhost:7474/db/data/node/791/labels",
+  "all_typed_relationships" : "http://localhost:7474/db/data/node/791/relationships/all/{-list|&|types}",
+  "traverse" : "http://localhost:7474/db/data/node/791/traverse/{returnType}",
+  "self" : "http://localhost:7474/db/data/node/791",
+  "property" : "http://localhost:7474/db/data/node/791/properties/{key}",
+  "properties" : "http://localhost:7474/db/data/node/791/properties",
+  "outgoing_typed_relationships" : "http://localhost:7474/db/data/node/791/relationships/out/{-list|&|types}",
+  "incoming_relationships" : "http://localhost:7474/db/data/node/791/relationships/in",
+  "create_relationship" : "http://localhost:7474/db/data/node/791/relationships",
+  "paged_traverse" : "http://localhost:7474/db/data/node/791/paged/traverse/{returnType}{?pageSize,leaseTime}",
+  "all_relationships" : "http://localhost:7474/db/data/node/791/relationships/all",
+  "incoming_typed_relationships" : "http://localhost:7474/db/data/node/791/relationships/in/{-list|&|types}",
+  "data" : {
+    "name" : "Phill"
+  }
+}
+I, [2014-01-20T20:58:57.670088 #26390]  INFO -- : [Neography::Query] /node {"name":"Phill"} [55.13ms]
+D, [2014-01-20T20:58:57.713427 #26390] DEBUG -- : OK, created {
+  "extensions" : {
+  },
+  "outgoing_relationships" : "http://localhost:7474/db/data/node/792/relationships/out",
+  "labels" : "http://localhost:7474/db/data/node/792/labels",
+  "all_typed_relationships" : "http://localhost:7474/db/data/node/792/relationships/all/{-list|&|types}",
+  "traverse" : "http://localhost:7474/db/data/node/792/traverse/{returnType}",
+  "self" : "http://localhost:7474/db/data/node/792",
+  "property" : "http://localhost:7474/db/data/node/792/properties/{key}",
+  "properties" : "http://localhost:7474/db/data/node/792/properties",
+  "outgoing_typed_relationships" : "http://localhost:7474/db/data/node/792/relationships/out/{-list|&|types}",
+  "incoming_relationships" : "http://localhost:7474/db/data/node/792/relationships/in",
+  "create_relationship" : "http://localhost:7474/db/data/node/792/relationships",
+  "paged_traverse" : "http://localhost:7474/db/data/node/792/paged/traverse/{returnType}{?pageSize,leaseTime}",
+  "all_relationships" : "http://localhost:7474/db/data/node/792/relationships/all",
+  "incoming_typed_relationships" : "http://localhost:7474/db/data/node/792/relationships/in/{-list|&|types}",
+  "data" : {
+    "name" : "Mary"
+  }
+}
+I, [2014-01-20T20:58:57.713720 #26390]  INFO -- : [Neography::Query] /node {"name":"Mary"} [43.17ms]
+D, [2014-01-20T20:58:57.758479 #26390] DEBUG -- : OK, created {
+  "extensions" : {
+  },
+  "outgoing_relationships" : "http://localhost:7474/db/data/node/793/relationships/out",
+  "labels" : "http://localhost:7474/db/data/node/793/labels",
+  "all_typed_relationships" : "http://localhost:7474/db/data/node/793/relationships/all/{-list|&|types}",
+  "traverse" : "http://localhost:7474/db/data/node/793/traverse/{returnType}",
+  "self" : "http://localhost:7474/db/data/node/793",
+  "property" : "http://localhost:7474/db/data/node/793/properties/{key}",
+  "properties" : "http://localhost:7474/db/data/node/793/properties",
+  "outgoing_typed_relationships" : "http://localhost:7474/db/data/node/793/relationships/out/{-list|&|types}",
+  "incoming_relationships" : "http://localhost:7474/db/data/node/793/relationships/in",
+  "create_relationship" : "http://localhost:7474/db/data/node/793/relationships",
+  "paged_traverse" : "http://localhost:7474/db/data/node/793/paged/traverse/{returnType}{?pageSize,leaseTime}",
+  "all_relationships" : "http://localhost:7474/db/data/node/793/relationships/all",
+  "incoming_typed_relationships" : "http://localhost:7474/db/data/node/793/relationships/in/{-list|&|types}",
+  "data" : {
+    "name" : "Luke"
+  }
+}
+I, [2014-01-20T20:58:57.758875 #26390]  INFO -- : [Neography::Query] /node {"name":"Luke"} [44.92ms]
+D, [2014-01-20T20:58:57.815564 #26390] DEBUG -- : OK, created {
+  "extensions" : {
+  },
+  "start" : "http://localhost:7474/db/data/node/789",
+  "self" : "http://localhost:7474/db/data/relationship/1161",
+  "property" : "http://localhost:7474/db/data/relationship/1161/properties/{key}",
+  "properties" : "http://localhost:7474/db/data/relationship/1161/properties",
+  "type" : "friends",
+  "end" : "http://localhost:7474/db/data/node/790",
+  "data" : {
+  }
+}
+I, [2014-01-20T20:58:57.816032 #26390]  INFO -- : [Neography::Query] /node/789/relationships {"to":"http://localhost:7474/db/data/node/790","data":null,"type":"friends"} [56.52ms]
+D, [2014-01-20T20:58:57.871447 #26390] DEBUG -- : OK, created {
+  "extensions" : {
+  },
+  "start" : "http://localhost:7474/db/data/node/790",
+  "self" : "http://localhost:7474/db/data/relationship/1162",
+  "property" : "http://localhost:7474/db/data/relationship/1162/properties/{key}",
+  "properties" : "http://localhost:7474/db/data/relationship/1162/properties",
+  "type" : "friends",
+  "end" : "http://localhost:7474/db/data/node/789",
+  "data" : {
+  }
+}
+I, [2014-01-20T20:58:57.871920 #26390]  INFO -- : [Neography::Query] /node/790/relationships {"to":"http://localhost:7474/db/data/node/789","data":null,"type":"friends"} [55.31ms]
+D, [2014-01-20T20:58:57.926324 #26390] DEBUG -- : OK, created {
+  "extensions" : {
+  },
+  "start" : "http://localhost:7474/db/data/node/790",
+  "self" : "http://localhost:7474/db/data/relationship/1163",
+  "property" : "http://localhost:7474/db/data/relationship/1163/properties/{key}",
+  "properties" : "http://localhost:7474/db/data/relationship/1163/properties",
+  "type" : "friends",
+  "end" : "http://localhost:7474/db/data/node/792",
+  "data" : {
+  }
+}
+I, [2014-01-20T20:58:57.926634 #26390]  INFO -- : [Neography::Query] /node/790/relationships {"to":"http://localhost:7474/db/data/node/792","data":null,"type":"friends"} [54.16ms]
+D, [2014-01-20T20:58:57.982782 #26390] DEBUG -- : OK, created {
+  "extensions" : {
+  },
+  "start" : "http://localhost:7474/db/data/node/792",
+  "self" : "http://localhost:7474/db/data/relationship/1164",
+  "property" : "http://localhost:7474/db/data/relationship/1164/properties/{key}",
+  "properties" : "http://localhost:7474/db/data/relationship/1164/properties",
+  "type" : "friends",
+  "end" : "http://localhost:7474/db/data/node/790",
+  "data" : {
+  }
+}
+I, [2014-01-20T20:58:57.983187 #26390]  INFO -- : [Neography::Query] /node/792/relationships {"to":"http://localhost:7474/db/data/node/790","data":null,"type":"friends"} [56.22ms]
+D, [2014-01-20T20:58:58.038230 #26390] DEBUG -- : OK, created {
+  "extensions" : {
+  },
+  "start" : "http://localhost:7474/db/data/node/790",
+  "self" : "http://localhost:7474/db/data/relationship/1165",
+  "property" : "http://localhost:7474/db/data/relationship/1165/properties/{key}",
+  "properties" : "http://localhost:7474/db/data/relationship/1165/properties",
+  "type" : "friends",
+  "end" : "http://localhost:7474/db/data/node/791",
+  "data" : {
+  }
+}
+I, [2014-01-20T20:58:58.038766 #26390]  INFO -- : [Neography::Query] /node/790/relationships {"to":"http://localhost:7474/db/data/node/791","data":null,"type":"friends"} [54.99ms]
+D, [2014-01-20T20:58:58.093858 #26390] DEBUG -- : OK, created {
+  "extensions" : {
+  },
+  "start" : "http://localhost:7474/db/data/node/791",
+  "self" : "http://localhost:7474/db/data/relationship/1166",
+  "property" : "http://localhost:7474/db/data/relationship/1166/properties/{key}",
+  "properties" : "http://localhost:7474/db/data/relationship/1166/properties",
+  "type" : "friends",
+  "end" : "http://localhost:7474/db/data/node/790",
+  "data" : {
+  }
+}
+I, [2014-01-20T20:58:58.094241 #26390]  INFO -- : [Neography::Query] /node/791/relationships {"to":"http://localhost:7474/db/data/node/790","data":null,"type":"friends"} [54.9ms]
+D, [2014-01-20T20:58:58.149628 #26390] DEBUG -- : OK, created {
+  "extensions" : {
+  },
+  "start" : "http://localhost:7474/db/data/node/791",
+  "self" : "http://localhost:7474/db/data/relationship/1167",
+  "property" : "http://localhost:7474/db/data/relationship/1167/properties/{key}",
+  "properties" : "http://localhost:7474/db/data/relationship/1167/properties",
+  "type" : "friends",
+  "end" : "http://localhost:7474/db/data/node/792",
+  "data" : {
+  }
+}
+I, [2014-01-20T20:58:58.150055 #26390]  INFO -- : [Neography::Query] /node/791/relationships {"to":"http://localhost:7474/db/data/node/792","data":null,"type":"friends"} [55.35ms]
+D, [2014-01-20T20:58:58.204835 #26390] DEBUG -- : OK, created {
+  "extensions" : {
+  },
+  "start" : "http://localhost:7474/db/data/node/792",
+  "self" : "http://localhost:7474/db/data/relationship/1168",
+  "property" : "http://localhost:7474/db/data/relationship/1168/properties/{key}",
+  "properties" : "http://localhost:7474/db/data/relationship/1168/properties",
+  "type" : "friends",
+  "end" : "http://localhost:7474/db/data/node/791",
+  "data" : {
+  }
+}
+I, [2014-01-20T20:58:58.205106 #26390]  INFO -- : [Neography::Query] /node/792/relationships {"to":"http://localhost:7474/db/data/node/791","data":null,"type":"friends"} [54.47ms]
+D, [2014-01-20T20:58:58.250477 #26390] DEBUG -- : OK, created {
+  "extensions" : {
+  },
+  "start" : "http://localhost:7474/db/data/node/791",
+  "self" : "http://localhost:7474/db/data/relationship/1169",
+  "property" : "http://localhost:7474/db/data/relationship/1169/properties/{key}",
+  "properties" : "http://localhost:7474/db/data/relationship/1169/properties",
+  "type" : "friends",
+  "end" : "http://localhost:7474/db/data/node/793",
+  "data" : {
+  }
+}
+I, [2014-01-20T20:58:58.251047 #26390]  INFO -- : [Neography::Query] /node/791/relationships {"to":"http://localhost:7474/db/data/node/793","data":null,"type":"friends"} [45.6ms]
+D, [2014-01-20T20:58:58.306450 #26390] DEBUG -- : OK, created {
+  "extensions" : {
+  },
+  "start" : "http://localhost:7474/db/data/node/793",
+  "self" : "http://localhost:7474/db/data/relationship/1170",
+  "property" : "http://localhost:7474/db/data/relationship/1170/properties/{key}",
+  "properties" : "http://localhost:7474/db/data/relationship/1170/properties",
+  "type" : "friends",
+  "end" : "http://localhost:7474/db/data/node/791",
+  "data" : {
+  }
+}
+I, [2014-01-20T20:58:58.307077 #26390]  INFO -- : [Neography::Query] /node/793/relationships {"to":"http://localhost:7474/db/data/node/791","data":null,"type":"friends"} [55.48ms]
+D, [2014-01-20T20:58:58.323889 #26390] DEBUG -- : OK, created [ {
+  "outgoing_relationships" : "http://localhost:7474/db/data/node/792/relationships/out",
+  "labels" : "http://localhost:7474/db/data/node/792/labels",
+  "data" : {
+    "name" : "Mary"
+  },
+  "all_typed_relationships" : "http://localhost:7474/db/data/node/792/relationships/all/{-list|&|types}",
+  "traverse" : "http://localhost:7474/db/data/node/792/traverse/{returnType}",
+  "self" : "http://localhost:7474/db/data/node/792",
+  "property" : "http://localhost:7474/db/data/node/792/properties/{key}",
+  "properties" : "http://localhost:7474/db/data/node/792/properties",
+  "outgoing_typed_relationships" : "http://localhost:7474/db/data/node/792/relationships/out/{-list|&|types}",
+  "incoming_relationships" : "http://localhost:7474/db/data/node/792/relationships/in",
+  "extensions" : {
+  },
+  "create_relationship" : "http://localhost:7474/db/data/node/792/relationships",
+  "paged_traverse" : "http://localhost:7474/db/data/node/792/paged/traverse/{returnType}{?pageSize,leaseTime}",
+  "all_relationships" : "http://localhost:7474/db/data/node/792/relationships/all",
+  "incoming_typed_relationships" : "http://localhost:7474/db/data/node/792/relationships/in/{-list|&|types}"
+}, {
+  "outgoing_relationships" : "http://localhost:7474/db/data/node/791/relationships/out",
+  "labels" : "http://localhost:7474/db/data/node/791/labels",
+  "data" : {
+    "name" : "Phill"
+  },
+  "all_typed_relationships" : "http://localhost:7474/db/data/node/791/relationships/all/{-list|&|types}",
+  "traverse" : "http://localhost:7474/db/data/node/791/traverse/{returnType}",
+  "self" : "http://localhost:7474/db/data/node/791",
+  "property" : "http://localhost:7474/db/data/node/791/properties/{key}",
+  "properties" : "http://localhost:7474/db/data/node/791/properties",
+  "outgoing_typed_relationships" : "http://localhost:7474/db/data/node/791/relationships/out/{-list|&|types}",
+  "incoming_relationships" : "http://localhost:7474/db/data/node/791/relationships/in",
+  "extensions" : {
+  },
+  "create_relationship" : "http://localhost:7474/db/data/node/791/relationships",
+  "paged_traverse" : "http://localhost:7474/db/data/node/791/paged/traverse/{returnType}{?pageSize,leaseTime}",
+  "all_relationships" : "http://localhost:7474/db/data/node/791/relationships/all",
+  "incoming_typed_relationships" : "http://localhost:7474/db/data/node/791/relationships/in/{-list|&|types}"
+} ]
+I, [2014-01-20T20:58:58.324319 #26390]  INFO -- : [Neography::Query] /node/789/traverse/node {"order":"breadth first","uniqueness":"node global","relationships":{"type":"friends","direction":"in"},"prune_evaluator":null,"return_filter":{"language":"javascript","body":"position.length() == 2;"},"max_depth":2} [15.99ms]
+E, [2014-01-20T21:13:47.759991 #26390] ERROR -- : Status: 404 Not Found
+Content-Type: application/json; charset=UTF-8
+Access-Control-Allow-Origin: *
+Server: Jetty(9.0.5.v20130815)
+Content-Length: 0
+
+{
+  "exception" : "NotFoundException",
+  "fullname" : "org.neo4j.graphdb.NotFoundException",
+  "stacktrace" : [ "org.neo4j.server.rest.web.DatabaseActions.getIndexedNodes(DatabaseActions.java:753)", "org.neo4j.server.rest.web.RestfulGraphDatabase.getIndexedNodes(RestfulGraphDatabase.java:1181)", "java.lang.reflect.Method.invoke(Method.java:606)", "org.neo4j.server.rest.transactional.TransactionalRequestDispatcher.dispatch(TransactionalRequestDispatcher.java:132)", "org.neo4j.server.rest.security.SecurityFilter.doFilter(SecurityFilter.java:112)", "java.lang.Thread.run(Thread.java:744)" ]
+} error: {
+  "exception" : "NotFoundException",
+  "fullname" : "org.neo4j.graphdb.NotFoundException",
+  "stacktrace" : [ "org.neo4j.server.rest.web.DatabaseActions.getIndexedNodes(DatabaseActions.java:753)", "org.neo4j.server.rest.web.RestfulGraphDatabase.getIndexedNodes(RestfulGraphDatabase.java:1181)", "java.lang.reflect.Method.invoke(Method.java:606)", "org.neo4j.server.rest.transactional.TransactionalRequestDispatcher.dispatch(TransactionalRequestDispatcher.java:132)", "org.neo4j.server.rest.security.SecurityFilter.doFilter(SecurityFilter.java:112)", "java.lang.Thread.run(Thread.java:744)" ]
+}

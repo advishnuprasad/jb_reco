@@ -1,10 +1,15 @@
 .row
   = simple_form_for(@post) do |f|
-    .inputs.col-sm-5
+    .inputs.col-sm-6
       = f.input :title
       = f.input :description
-      = f.input :links
+      = f.input :links, :input_html => {:rows => 5}
       = f.input :tags, :collection => Post::AvailableTags
 
       .actions
-        = f.button :submit, :class => ['btn btn-default']
+        = f.button :submit, :class => ['btn btn-primary']
+
+/ = bootstrap_form_for @post do |f|
+/   = f.text_field :title
+/   = f.text_area :description
+/   = f.actions
